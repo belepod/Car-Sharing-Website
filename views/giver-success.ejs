@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ride Added</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="message-container">
+        <h1>Ride Successfully Added!</h1>
+        <p>
+            Your ride with the <strong><%= vehicleType %></strong> from 
+            <strong><%= startingPoint %></strong> to 
+            <strong><%= destination %></strong> has been successfully listed for 
+            a fare of <strong>$<%= fare %></strong>.
+        </p>
+        <div class="button-container">
+            <a href="/" class="btn">Go to Main Menu</a>
+            <a href="/login" class="btn">Go to Login</a>
+            <a href="javascript:history.back()" class="btn">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -118,6 +118,7 @@ app.get('/giver', isAuthenticated, (req, res) => {
 // Handle ride submission by Taxi Giver
 app.post('/giver', isAuthenticated, async (req, res) => {
     const { vehicleType, startingPoint, destination, fare } = req.body;
+    
     const ride = new Ride({
         giver: req.session.user.username,
         vehicleType,
@@ -127,8 +128,11 @@ app.post('/giver', isAuthenticated, async (req, res) => {
     });
 
     await ride.save();
-    res.send('Ride successfully added! You can add more rides if you want.');
+
+    // Render success page with options to go to the main menu, login page, or previous page
+    res.render('giver-success', { vehicleType, startingPoint, destination, fare });
 });
+
 
 // Taxi Receiver page
 app.get('/receiver', isAuthenticated, (req, res) => {
@@ -150,7 +154,7 @@ app.post('/receiver', isAuthenticated, async (req, res) => {
     res.render('available-rides', { rides });
 });
 
-// Handle booking a ride
+// Handle booking a ride by the receiver
 app.post('/book', isAuthenticated, async (req, res) => {
     const { rideId } = req.body;
 
@@ -158,11 +162,17 @@ app.post('/book', isAuthenticated, async (req, res) => {
     const ride = await Ride.findById(rideId);
 
     if (ride) {
-        res.send(`Ride from ${ride.startingPoint} to ${ride.destination} successfully booked at a fare of $${ride.fare}.`);
+        // Render success page after booking with navigation buttons
+        res.render('receiver-success', {
+            startingPoint: ride.startingPoint,
+            destination: ride.destination,
+            fare: ride.fare
+        });
     } else {
         res.send('Ride not found.');
     }
 });
+
 
 // Logout functionality
 app.get('/logout', (req, res) => {
