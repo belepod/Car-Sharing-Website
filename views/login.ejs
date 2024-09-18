@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Taxi Pool Login</h1>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <select name="userType">
+                <option value="giver">Taxi Pool Giver</option>
+                <option value="receiver">Taxi Pool Receiver</option>
+            </select>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

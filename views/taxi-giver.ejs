@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taxi Pool Giver</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Provide Your Ride</h1>
+        <form action="/giver" method="POST">
+            <label>Vehicle Type</label>
+            <input type="text" name="vehicleType" placeholder="E.g. Sedan, SUV" required>
+
+            <label>Starting Point</label>
+            <input type="text" name="startingPoint" placeholder="Enter Starting Location" required>
+
+            <label>Destination</label>
+            <input type="text" name="destination" placeholder="Enter Destination" required>
+
+            <label>Fare</label>
+            <input type="number" name="fare" placeholder="Enter Fare in USD" required>
+
+            <button type="submit">Submit Ride</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taxi Pool Receiver</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find a Ride</h1>
+        <form action="/receiver" method="POST">
+            <label>Starting Point</label>
+            <input type="text" name="startingPoint" placeholder="Enter Starting Location" required>
+
+            <label>Destination</label>
+            <input type="text" name="destination" placeholder="Enter Destination" required>
+
+            <button type="submit">Find Rides</button>
+        </form>
+    </div>
+</body>
+</html>

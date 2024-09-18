@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Register</h1>
+        <form action="/register" method="POST">
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            
+            <!-- User Type Selection -->
+            <label for="userType">I am a:</label>
+            <select name="userType" id="userType" required>
+                <option value="giver">Taxi Pool Giver</option>
+                <option value="receiver">Taxi Pool Receiver</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

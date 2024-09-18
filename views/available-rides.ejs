@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Rides</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Available Rides</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Giver</th>
+                    <th>Vehicle Type</th>
+                    <th>Starting Point</th>
+                    <th>Destination</th>
+                    <th>Fare</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% rides.forEach(ride => { %>
+                <tr>
+                    <td><%= ride.giver %></td>
+                    <td><%= ride.vehicleType %></td>
+                    <td><%= ride.startingPoint %></td>
+                    <td><%= ride.destination %></td>
+                    <td>$<%= ride.fare %></td>
+                    <td>
+                        <form action="/book" method="POST">
+                            <input type="hidden" name="rideId" value="<%= ride._id %>">
+                            <button type="submit">Book</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
