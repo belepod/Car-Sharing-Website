@@ -1,11 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxi Pool - Welcome</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('/images/img1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 200vh; /* Makes the website longer */
+            color: #fff;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b6b;
+        }
+
+        .login-container {
+            text-align: center;
+            margin-top: 150px;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff6b6b;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 4px 10px;
+        }
+
+        button:hover {
+            background-color: #ff4a4a;
+        }
+
+        .blogs {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 80%;
+        }
+
+        .blog-post {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-post img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .blog-post h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            font-size: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="login-container">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Container -->
+    <div class="login-container" id="home">
         <h1>Welcome to LOCO KA</h1>
         <p>Please choose an option:</p>
         <form action="/login">
@@ -15,5 +157,31 @@
             <button type="submit">Register</button>
         </form>
     </div>
+
+    <!-- Blogs Section -->
+    <section class="blogs">
+        <div class="blog-post">
+            <img src="/images/img2.jpg" alt="Blog Image 1">
+            <h2>Difficulties finding taxies</h2>
+            <p>Taxis often get caught in traffic, and public transport schedules can be unpredictable. During peak hours, the transportation systems can become overwhelmed. Long lines form at bus stops and train stations, and seats may be scarce. The influx of commuters can also lead to delays and overcrowding on vehicles, making the journey less comfortable. Additionally, language barriers and cultural differences can pose significant challenges for visitors navigating transportation systems.</p>
+        </div>
+        <div class="blog-post">
+            <img src="/images/img3.jpg" alt="Blog Image 2">
+            <h2>Scaling Long Distances</h2>
+            <p>Scaling long distances can be a daunting task, but with the right preparation and approach, it's achievable. Whether you're training for a marathon or simply looking to increase your endurance, gradual progression and proper nutrition are key. Incorporating interval training, hill workouts, and long runs can help build stamina and improve your ability to sustain a consistent pace over extended periods. Remember to listen to your body, rest adequately, and enjoy the journey.</p>
+        </div>
+        <div class="blog-post">
+            <img src="/images/img4.jpg" alt="Blog Image 3">
+            <h2>Geological View</h2>
+            <p>geographic areas, providing essential information about locations, distances, and features. They serve as valuable tools for navigation, exploration, and understanding the world around us. From ancient cartographic charts to modern digital maps, these representations have evolved over time, incorporating increasingly precise data and advanced technologies.Whether you're planning a trip, studying geography, or simply curious about the world, maps offer a fascinating and informative perspective.</p>
+        </div>
+        <div class="blog-post">
+            <img src="/images/img5.jpg" alt="Blog Image 4">
+            <h2>Sustenance</h2>
+            <p>Carpooling offers a sustainable alternative to solo driving, reducing carbon emissions and traffic congestion. By sharing rides, individuals can conserve fuel, minimize their environmental impact, and save money on transportation costs. Additionally, carpooling fosters a sense of community and provides opportunities for social interaction.</p>
+        </div>
+    </section>
 </body>
+
 </html>
+

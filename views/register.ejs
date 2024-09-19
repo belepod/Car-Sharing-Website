@@ -1,16 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #d4af37, #b8860b); /* Dark yellowish gradient */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            width: 400px; /* Increased width */
+            text-align: center;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Increased font size */
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 15px; /* Increased padding */
+            margin-bottom: 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        input::placeholder {
+            color: #888;
+        }
+
+        input, select {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        select {
+            appearance: none;
+        }
+
+        button {
+            background-color: #ff5c5c;
+            border: none;
+            padding: 15px 25px; /* Increased padding */
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e04848;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1rem; /* Slightly increased font size */
+            margin-bottom: 10px;
+            text-align: left;
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
+    <!-- Registration Form Container -->
     <div class="login-container">
         <h1>Register</h1>
         <form action="/register" method="POST">
             <input type="text" name="username" placeholder="Enter Username" required>
             <input type="password" name="password" placeholder="Enter Password" required>
-            
+
             <!-- User Type Selection -->
             <label for="userType">I am a:</label>
             <select name="userType" id="userType" required>
@@ -22,4 +117,5 @@
         </form>
     </div>
 </body>
+
 </html>

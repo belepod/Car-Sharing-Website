@@ -1,8 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Booked</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #222; /* Dark background */
+        }
+
+        /* Centered translucent white container */
+        .message-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9); /* Translucent white */
+            padding: 50px; /* Increased padding */
+            width: 600px; /* Increased width */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for contrast */
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333; /* Darker text for contrast */
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 40px; /* Added more space between text and buttons */
+            color: #333; /* Darker text for contrast */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Button style */
+        .btn {
+            padding: 10px 20px;
+            background-color: #e74c3c; /* Reddish button */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em; /* Slightly larger font for buttons */
+        }
+
+        .btn:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+    </style>
 </head>
 <body>
     <div class="message-container">

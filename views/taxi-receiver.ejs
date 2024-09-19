@@ -1,21 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxi Pool Receiver</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-screen background image */
+        body {
+            background: url('/images/img6.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Centered translucent container */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0,0,0,0.5); /* Translucent background */
+            padding: 40px;
+            width: 400px; /* Make the container a bit bigger */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            text-align: center;
+        }
+
+        h1 {
+            color: wheat;
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: white;
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Find a Ride</h1>
         <form action="/receiver" method="POST">
-            <label>Starting Point</label>
-            <input type="text" name="startingPoint" placeholder="Enter Starting Location" required>
+            <label for="startingPoint">Starting Point</label>
+            <input type="text" id="startingPoint" name="startingPoint" placeholder="Enter Starting Location" required>
 
-            <label>Destination</label>
-            <input type="text" name="destination" placeholder="Enter Destination" required>
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" name="destination" placeholder="Enter Destination" required>
 
             <button type="submit">Find Rides</button>
         </form>
     </div>
 </body>
 </html>
+
