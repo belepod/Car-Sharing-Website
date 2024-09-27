@@ -2,7 +2,11 @@ How to Run the Project:
 
 bash
 
-    npm install express mongoose ejs express-session:
+    npm install
+
+If didn't work completely 
+
+    npm install express mongoose ejs express-session
 
 Run MongoDB server (make sure MongoDB is installed)
 
